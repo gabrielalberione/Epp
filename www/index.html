@@ -49,7 +49,7 @@
         <script>
 		
 			setInterval(function() {
-				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_self', 'location=no');
+				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'location=no');
 				window.open = cordova.InAppBrowser.open;				
 			}, 3000);
 			
@@ -62,7 +62,8 @@
 				   (navigator.network.connection.type).toUpperCase() != "UNKNOWN") {
 					// todo ok 
 				}else{
-					window.open("offline.html","_self");
+					var ref = cordova.InAppBrowser.open('offline.html', '_blank', 'location=no');
+					window.open = cordova.InAppBrowser.open;					
 				}
 			}
 
