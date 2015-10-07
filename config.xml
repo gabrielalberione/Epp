@@ -24,7 +24,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
 	
-	<gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="com.cordova.plugin.inappbrowser.with.loading.spinner" version="1.0.13" />
 	
 	<!-- ESTADO DE CONEXION -->
 	<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
