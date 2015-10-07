@@ -48,10 +48,11 @@
     </body>
         <script>
 		
-			setInterval(function() {
-				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'location=no');
-				window.open = cordova.InAppBrowser.open;				
-			}, 3000);
+			redireccionar = setInterval(function() {
+				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'hidden=yes');
+				window.open = cordova.InAppBrowser.open;	
+				clearInterval(redireccionar);			
+			}, 1000);
 			
 			verifConexion = setInterval(function() {
 				verificiarConexion();	
