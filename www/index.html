@@ -49,9 +49,9 @@
         <script>
 		
 			redireccionar = setInterval(function() {
+				clearInterval(redireccionar);			
 				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'hidden=yes');
 				window.open = cordova.InAppBrowser.open;	
-				clearInterval(redireccionar);			
 			}, 1000);
 			
 			verifConexion = setInterval(function() {
