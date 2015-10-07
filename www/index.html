@@ -67,6 +67,7 @@
 				   (navigator.network.connection.type).toUpperCase() != "UNKNOWN") {
 					// todo ok 
 				}else{
+					clearInterval(verifConexion);		
 					var ref = cordova.InAppBrowser.open('offline.html', '_blank', 'location=no');
 					window.open = cordova.InAppBrowser.open;					
 				}
