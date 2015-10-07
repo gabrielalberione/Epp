@@ -47,6 +47,11 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>                     
     </body>
         <script>	
+			var ref = null;
+			$(document).ready(function() {	
+				ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'location=no,hidden=yes');		
+				window.open = cordova.InAppBrowser.open;			
+			});
 			
 			redireccionar = setInterval(function() {
 				ref.show();
