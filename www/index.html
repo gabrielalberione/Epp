@@ -50,7 +50,7 @@
 		
 			
 			redireccionar = setInterval(function() {
-				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'location=no', 'hidden=yes');		
+				var ref = cordova.InAppBrowser.open('http://www.elpueblopropone.com.ar', '_blank', 'location=no,hidden=yes');		
 				ref.addEventListener('loadstop', function() {
 					ref.show();
 				});
